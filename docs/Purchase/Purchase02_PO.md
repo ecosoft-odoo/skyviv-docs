@@ -20,7 +20,7 @@
     3. Re-Send by Email: ส่งอีเมลให้ vendor อีกครั้งหลังการแก้ไขข้อมูล
     4. Cancel: กดเพื่อยกเลิก RFQ/PO
 
-    ![](img/RFQ05.png)
+    ![](img/PO03.png)
 
     ถ้ากดปุ่ม Cancel เพื่อยกเลิก RFQ/ PO สถานะของเอกสารจะเปลี่ยนจาก RFQ sent/ Purchase Order เป็น **Cancelled**
 
@@ -28,6 +28,6 @@
 
 3. เมื่อกดยืนยันคำสั่งซื้อ สถานะเอกสารจะเปลี่ยนจาก RFQ sent เป็น **Purchase Order** แสดงถึงการยืนยันคำสั่งซื้อ
 
-    ![](img/RFQ06.png)
+    ![](img/PO04.png)
 
 
