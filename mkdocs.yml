@@ -20,11 +20,12 @@ nav:
       - การบันทึกจ่ายชำระ: Accounting/ac04_vendorpayment.md
       - การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ: Accounting/ac05_landedcost.md
   - Purchase:
-      - เทสๆๆ: Purchase/topic_1.md
-      - Topic 2: Purchase/topic_2.md
+      - การสร้างคำขอใบเสนอราคา (RFQ): Purchase/Purchase01_RFQ.md
+      - การยืนยันคำสั่งซื้อ (Purchase Order): Purchase/Purchase02_PO.md
+      - การรับสินค้าเข้าคลัง (Stock IN): Purchase/Purchase03_IN.md
   - Sales:
-      - Topic 1: Sales/topic_1.md
-      - Topic 2: Sales/topic_2.md
+      - การสร้างใบเสนอราคา (Quotation): Sales/Sales01_Quotation.md
+      - การยืนยันคำสั่งขาย (Sales Order): Sales/Sales02_SO.md
 markdown_extensions:
   - admonition
   - pymdownx.details
