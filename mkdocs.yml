@@ -26,6 +26,7 @@ nav:
   - Sales:
       - การสร้างใบเสนอราคา (Quotation): Sales/Sales01_Quotation.md
       - การยืนยันคำสั่งขาย (Sales Order): Sales/Sales02_SO.md
+      - การส่งสินค้าออกจากคลัง (Stock OUT): Sales/Sales03_OUT.md
 markdown_extensions:
   - admonition
   - pymdownx.details
