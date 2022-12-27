@@ -23,6 +23,7 @@ nav:
       - การสร้างคำขอใบเสนอราคา (RFQ): Purchase/Purchase01_RFQ.md
       - การยืนยันคำสั่งซื้อ (Purchase Order): Purchase/Purchase02_PO.md
       - การรับสินค้าเข้าคลัง (Stock IN): Purchase/Purchase03_IN.md
+      - การจ่ายค่าสินค้าล่วงหน้า (Register Deposit): Purchase/Purchase04_deposit.md
   - Sales:
       - การสร้างใบเสนอราคา (Quotation): Sales/Sales01_Quotation.md
       - การยืนยันคำสั่งขาย (Sales Order): Sales/Sales02_SO.md
