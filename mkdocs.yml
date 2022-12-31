@@ -16,9 +16,14 @@ nav:
   - Accounting:
       - การสร้างข้อมูลหลัก: Accounting/ac01_masterdata.md
       - การบันทึกรายได้และตั้งหนี้ลูกหนี้: Accounting/ac02_invoices.md
+      - การบันทึกรับเงิน: Accounting/ac10_customerpayment.md
       - การบันทึกค่าใช้จ่ายและตั้งหนี้เจ้าหนี้: Accounting/ac03_vendorbill.md
       - การบันทึกจ่ายชำระ: Accounting/ac04_vendorpayment.md
       - การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ: Accounting/ac05_landedcost.md
+      - เงินทดรองจ่าย: Accounting/ac06_advance.md
+      - เงินสดย่อย: Accounting/ac07_pettycash.md
+      - สินทรัพย์: Accounting/ac08_asset.md
+      - การปรับปรุงรายการ: Accounting/ac09_journalentries.md
   - Purchase:
       - การสร้างคำขอใบเสนอราคา (RFQ): Purchase/Purchase01_RFQ.md
       - การยืนยันคำสั่งซื้อ (Purchase Order): Purchase/Purchase02_PO.md
