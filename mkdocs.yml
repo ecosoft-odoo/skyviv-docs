@@ -29,6 +29,10 @@ nav:
   - Inventory:
       - การส่งสินค้าออกจากคลัง (Stock OUT): Inventory/in_OUT.md
       - การรับสินค้าเข้าคลัง (Stock IN): Inventory/in_IN.md
+      - รายงานสินค้าคงเหลือ (Inventory Report): Inventory/in_invreport.md
+      - รายงานการคาดการณ์สินค้าคงเหลือ (Forcasted Inventory): Inventory/in_invforcasted.md
+      - รายงานมูลค่าสินค้าคงเหลือ (Inventory Valuation): Inventory/in_invvaluation.md
+      - รายงานการเคลื่อนไหวของสินค้าคงเหลือ (Product Moves): Inventory/in_productmoves.md
   - Accounting:
       - การสร้างข้อมูลหลัก: Accounting/ac01_masterdata.md
       - การบันทึกรายได้และตั้งหนี้ลูกหนี้: Accounting/ac02_invoices.md
