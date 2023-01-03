@@ -36,6 +36,7 @@ nav:
       - การบันทึกค่าใช้จ่ายและตั้งหนี้เจ้าหนี้: Accounting/ac03_vendorbill.md
       - การบันทึกจ่ายชำระ: Accounting/ac04_vendorpayment.md
       - การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ: Accounting/ac05_landedcost.md
+      - การกลับรายการภาษีซื้อที่ยังไม่ถึงกำหนดชำระ: Accounting/ac13_cleartax.md
       - เงินทดรองจ่าย: Accounting/ac06_advance.md
       - เงินสดย่อย: Accounting/ac07_pettycash.md
       - สำรองจ่าย: Accounting/ac11_expense.md
