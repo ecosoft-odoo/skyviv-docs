@@ -41,6 +41,8 @@ nav:
       - สำรองจ่าย: Accounting/ac11_expense.md
       - สินทรัพย์: Accounting/ac08_asset.md
       - การปิดบัญชี: Accounting/ac09_journalentries.md
+      - รายงาน: Accounting/ac12_report.md
+      
 
 
 markdown_extensions:
