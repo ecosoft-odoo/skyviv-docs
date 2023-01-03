@@ -15,6 +15,7 @@ nav:
   - Overview: index.md
   - Introduction:
       - การใช้งานระบบ: introduction/it_01.md
+      - ฟังก์ชันพื้นฐานในระบบ: introduction/it_02.md
   - Sales:
       - การสร้างใบเสนอราคา (Quotation): Sales/Sales01_Quotation.md
       - การยืนยันคำสั่งขาย (Sales Order): Sales/Sales02_SO.md
@@ -37,8 +38,9 @@ nav:
       - การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ: Accounting/ac05_landedcost.md
       - เงินทดรองจ่าย: Accounting/ac06_advance.md
       - เงินสดย่อย: Accounting/ac07_pettycash.md
+      - สำรองจ่าย: Accounting/ac11_expense.md
       - สินทรัพย์: Accounting/ac08_asset.md
-      - การปรับปรุงรายการ: Accounting/ac09_journalentries.md
+      - การปิดบัญชี: Accounting/ac09_journalentries.md
 
 
 markdown_extensions:
