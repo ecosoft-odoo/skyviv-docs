@@ -214,6 +214,6 @@
 
 !!! Note
     * เมื่อเลือก WHT ระบบจะแสดง link ให้ไปออกหนังรับรองหัก ณ ที่จ่าย
-    ![](img/jv_3.png)
-    * เมื่อติ๊ก Manual Tax Invoice ระบบจะแสดง Tab Tax Invoice สำหรับการออกรายงานภาษีมูลค่าเพิ่ม
     ![](img/jv_4.png)
+    * เมื่อติ๊ก Manual Tax Invoice ระบบจะแสดง Tab Tax Invoice สำหรับการออกรายงานภาษีมูลค่าเพิ่ม
+    ![](img/jv_3.png)
