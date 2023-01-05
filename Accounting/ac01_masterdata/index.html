@@ -1,0 +1,1446 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Inventory/in_productmoves/">
+      
+      
+        <link rel="next" href="../ac02_invoices/">
+      
+      <link rel="icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>การสร้างข้อมูลหลัก - SKYVIV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#master-data" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SKYVIV" class="md-header__button md-logo" aria-label="SKYVIV" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYVIV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              การสร้างข้อมูลหลัก
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/it_01/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Sales/Sales01_Quotation/" class="md-tabs__link">
+        Sales
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Purchase/Purchase01_RFQ/" class="md-tabs__link">
+        Purchase
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Inventory/in_OUT/" class="md-tabs__link">
+        Inventory
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Accounting
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SKYVIV" class="md-nav__button md-logo" aria-label="SKYVIV" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    SKYVIV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/it_01/" class="md-nav__link">
+        การใช้งานระบบ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/it_02/" class="md-nav__link">
+        ฟังก์ชันพื้นฐานในระบบ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales01_Quotation/" class="md-nav__link">
+        การสร้างใบเสนอราคา (Quotation)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales02_SO/" class="md-nav__link">
+        การยืนยันคำสั่งขาย (Sales Order)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales03_OUT/" class="md-nav__link">
+        การส่งสินค้าออกจากคลัง (Stock OUT)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales04_BoM/" class="md-nav__link">
+        การสร้างชุดของสินค้า (BOM)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Purchase
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Purchase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Purchase
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase01_RFQ/" class="md-nav__link">
+        การสร้างคำขอใบเสนอราคา (RFQ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase02_PO/" class="md-nav__link">
+        การยืนยันคำสั่งซื้อ (Purchase Order)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase03_IN/" class="md-nav__link">
+        การรับสินค้าเข้าคลัง (Stock IN)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase04_deposit/" class="md-nav__link">
+        การจ่ายค่าสินค้าล่วงหน้า (Register Deposit)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Inventory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Inventory" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Inventory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_OUT/" class="md-nav__link">
+        การส่งสินค้าออกจากคลัง (Stock OUT)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_IN/" class="md-nav__link">
+        การรับสินค้าเข้าคลัง (Stock IN)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_invreport/" class="md-nav__link">
+        รายงานสินค้าคงเหลือ (Inventory Report)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_invforcasted/" class="md-nav__link">
+        รายงานการคาดการณ์สินค้าคงเหลือ (Forcasted Inventory)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_invvaluation/" class="md-nav__link">
+        รายงานมูลค่าสินค้าคงเหลือ (Inventory Valuation)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Inventory/in_productmoves/" class="md-nav__link">
+        รายงานการเคลื่อนไหวของสินค้าคงเหลือ (Product Moves)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Accounting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          การสร้างข้อมูลหลัก
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        การสร้างข้อมูลหลัก
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    การสร้างรายชื่อคู่ค้า
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    การสร้างเลขที่บัญชี
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    การสร้างสมุดบัญชีรายวัน
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    การสร้างหมวดหมู่สินทรัพย์
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    การสร้างกลุ่มสินทรัพย์
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    การสร้างข้อมูลหลักหมวดหมู่สินค้า
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    การสร้างข้อมูลหลักสินค้า
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac02_invoices/" class="md-nav__link">
+        การบันทึกรายได้และตั้งหนี้ลูกหนี้
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac10_customerpayment/" class="md-nav__link">
+        การบันทึกรับเงิน
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac03_vendorbill/" class="md-nav__link">
+        การบันทึกค่าใช้จ่ายและตั้งหนี้เจ้าหนี้
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac04_vendorpayment/" class="md-nav__link">
+        การบันทึกจ่ายชำระ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac05_landedcost/" class="md-nav__link">
+        การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac13_cleartax/" class="md-nav__link">
+        การกลับรายการภาษีซื้อที่ยังไม่ถึงกำหนดชำระ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac06_advance/" class="md-nav__link">
+        เงินทดรองจ่าย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac07_pettycash/" class="md-nav__link">
+        เงินสดย่อย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac11_expense/" class="md-nav__link">
+        สำรองจ่าย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac08_asset/" class="md-nav__link">
+        สินทรัพย์
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac09_journalentries/" class="md-nav__link">
+        การปิดบัญชี
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac12_report/" class="md-nav__link">
+        รายงาน
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ac14_Initial/" class="md-nav__link">
+        การบันทึกรับชำระยอดยกมา
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    การสร้างรายชื่อคู่ค้า
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    การสร้างเลขที่บัญชี
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    การสร้างสมุดบัญชีรายวัน
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    การสร้างหมวดหมู่สินทรัพย์
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    การสร้างกลุ่มสินทรัพย์
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    การสร้างข้อมูลหลักหมวดหมู่สินค้า
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    การสร้างข้อมูลหลักสินค้า
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="master-data">การสร้างข้อมูลหลัก (Master Data)</h1>
+<h2 id="_1">การสร้างรายชื่อคู่ค้า</h2>
+<p><strong>Menu ::</strong> Contacts &gt; Contacts</p>
+<ol>
+<li>กดปุ่ม Create เพื่อสร้างคู่ค้า</li>
+<li>
+<p>ระบบจะพาไปที่หน้าต่างของการสร้างคู่ค้า ให้กรอกข้อมูลส่วนบนดังนี้</p>
+<ul>
+<li>
+<p>(1) กรณีเป็นบุคคลทั่วไป (Individual) ให้กรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) First name: ชื่อ</li>
+<li>(2) Last name: นามสกุล
+<img alt="" src="../img/contact_1.png" /></li>
+</ul>
+</li>
+<li>
+<p>(2) กรณีเป็นบริษัทหรือสำนักงาน (Company) ที่ไม่ใช้บุคคลทั่วไปให้กรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) Name: ชื่อบริษัท
+<img alt="" src="../img/contact_2.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>เมื่อกรอกชื่อของคู่ค้าเรียบร้อยแล้วให้ใส่รายละเอียดดังนี้</p>
+<ul>
+<li>(1) Street: ที่อยู่</li>
+<li>(2) Streer2: เขต</li>
+<li>(3) City: จังหวัด</li>
+<li>(4) State: ไม่ต้องกรอก</li>
+<li>(5) ZIP: รหัสไปรษณีย์</li>
+<li>(6) Country: ประเทศ</li>
+<li>(7) Tax ID: เลขประจำตัวผู้เสียภาษี</li>
+<li>(8) Tax Branch: สาขา </li>
+<li>(9) Phone: เบอร์โทรศัพท์ (ถ้ามี)</li>
+<li>(10) Mobile: เบอร์โทรศัพท์ (ถ้ามี)</li>
+<li>(11) Email: อีเมล (ถ้ามี)</li>
+<li>(12) Website Link: เว็บไซต์ (ถ้ามี)</li>
+<li>(13) Legal Form: คำนำหน้า</li>
+<li>(14) Tags: ไม่ต้องกรอก
+<img alt="" src="../img/contact_3.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากต้องการกรอกข้อมูลเพิ่มเติมเกี่ยวกับคู่ค้าสามารถกรอกได้ตาม Tab ต่างๆ ดังนี้</p>
+<ul>
+<li>(1) Sales &amp; Purchase ใช้สำหรับบันทึกข้อมูลเกี่ยวกับฝ่ายซื้อและขาย
+    <img alt="" src="../img/contact_5.png" />       </li>
+<li>(2) Invoicing ใช้สำหรับบันทึกข้อมูลเกี่ยวกับทางบัญชี<ul>
+<li>(1) Bank: ธนาคารของคู่ค้า</li>
+<li>(2) Account Number: เลขที่บัญชีธนาคารของคู่ค้า</li>
+<li>(3) Account Receivable: เลขที่บัญชีที่ต้องการใช้บันทึกบัญชีฝั่งลูกหนี้</li>
+<li>(4) Account Payable: เลขที่บัญชีที่ต้องการใช้บันทึกบัญชีฝั่งเจ้าหนี้
+<img alt="" src="../img/contact_6.png" /> </li>
+</ul>
+</li>
+<li>(3) Personal Income Tax ใช้สำหรับบันทึกข้อมูลในกรณีจัดเก็บภาษีแบบ PIT
+    <img alt="" src="../img/contact_7.png" /> </li>
+<li>(4) Internal Notes ใช้สำหรับบันทึกข้อมูลอื่น
+<img alt="" src="../img/contact_8.png" /></li>
+</ul>
+</li>
+<li>
+<p>เมื่อตรวจสอบข้อมูลเรียบร้อยแล้วให้กด Save</p>
+</li>
+</ol>
+<hr />
+<h2 id="_2">การสร้างเลขที่บัญชี</h2>
+<p><strong>Menu ::</strong> Invoicing &gt; Configuration &gt; Chart of Accounts</p>
+<ol>
+<li>
+<p>กดปุ่ม Create เพื่อสร้างเลขที่บัญชี และกรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) Code: เลขที่บัญชีที่ต้องการเพิ่มข้อมูล</li>
+<li>(2) Account Name: ชื่อเลขที่บัญชี</li>
+<li>(3) Type: ประเภทของเลขที่บัญชี</li>
+<li>(4) Allow Reconciliation: ใช้สำหรับต้องการกระทบยอดเลขที่บัญชี
+<img alt="" src="../img/coa_1.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากที่ต้องการกรอกข้อมูลของเลขที่บัญชีเพิ่มเติมให้กด "Set Up" </p>
+</li>
+<li>
+<p>ระบบจะแสดงหน้าต่างสำหรับการตั้งค่าเกี่ยวกับเลขที่บัญชีเพิ่มเติมดังนี้</p>
+<ul>
+<li>(1) Asset Profile: ใช้สำหรับเลขที่บัญชีที่ต้องการผูกกับหมวดหมู่สินทรัพย์</li>
+<li>(2) WHT Account: เลขที่บัญชีที่เกี่ยวข้องกับการบันทึกหัก ณ ที่จ่าย</li>
+<li>(3) Deprecated: ติ๊กเมื่อไม่ต้องการใช้งานเลขที่บัญชีนั้นแล้ว</li>
+<li>(4) Centralized: ติ๊กเมื่อไม่ต้องการให้บัญชีแยกประเภทไม่แสดงรายละเอียด</li>
+<li>(5) Default Taxes: ตั้งค่าให้ภาษีมูลค่าเพิ่มแสดงขึ้นเมื่อมีการใช้งานเลขที่บัญชี</li>
+<li>(6) Tags: ใช้สำหรับการผูกกับงบกระแสเงินสด (กรณีของสสน.ไม่ต้องใช้)</li>
+<li>(7)  Allowed Journals: หากต้องการระบุสมุดบัญชีที่ต้องการใช้งาน
+<img alt="" src="../img/coa_3.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากตั้งค่าเรียบร้อยแล้วให้กด Save</p>
+</li>
+</ol>
+<hr />
+<h2 id="_3">การสร้างสมุดบัญชีรายวัน</h2>
+<p><strong>Menu ::</strong> Invoicing &gt; Configuration &gt; Journals</p>
+<p>การสร้างสมุดรายวันเพิ่มเติมนอกเหนือจากสมุดรายวันที่มีอยู่ในระบบ ใช้สำหรับกรณีที่มีการเพิ่มบัญชีธนาคาร ซึ่งฝ่ายบัญชีจะต้องทำการสร้างสมุดรายวันเพิ่มในระบบดังนี้</p>
+<ol>
+<li>
+<p>กดปุ่ม Create เพื่อสร้างสมุดรายวัน และกรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) Journal Name: ชื่อสมุดรายวัน</li>
+<li>(2) Type: ให้เลือกเป็น "Bank"</li>
+<li>(3) Bank Account: ระบุเลขที่บัญชีที่ใช้บันทึกบัญชี</li>
+<li>(4) Suspense Account: บัญชีพักธนาคาร ใช้สำหรับการบันทึกในกรณีโอนเงินระหว่างธนาคาร</li>
+<li>(5) Short Code: รหัสของสมุดรายวัน
+<img alt="" src="../img/journal_1.png" /></li>
+</ul>
+</li>
+<li>
+<p>กรอกข้อมูลสำหรับบัญชีพักที่เพิ่มเติม Tab "Payments Configuration"</p>
+<ul>
+<li>(1) Outstanding Receipts Account: ระบุเลขที่บัญชีธนาคารสำหรับการบันทึกฝั่งรับ</li>
+<li>(2) Outstanding Payments Account:  ระบุเลขที่บัญชีธนาคารสำหรับการบันทึกฝั่งจ่าย
+<img alt="" src="../img/journal_2.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากตั้งค่าเรียบร้อยแล้วให้กด Save</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">วิธีการสร้าง Bank Account จากหน้าต่าง Journals</p>
+<ul>
+<li>(1) พิมพ์ชื่อ เลขบัญชีที่บรรทัด <strong>Bank Account</strong>
+    <img alt="" src="../img/journal_3.png" /></li>
+<li>(2) กด Create and Edit
+    <img alt="" src="../img/journal_4.png" /></li>
+<li>(3) ระบบจะแสดงหน้าต่างให้กรอกข้อมูลเพิ่ม<ul>
+<li>(1) Code: เลขที่บัญชีที่ต้องการเพิ่มข้อมูล</li>
+<li>(2) Account Name: ชื่อเลขที่บัญชี</li>
+<li>(3) Type: ประเภทของเลขที่บัญชี
+<img alt="" src="../img/journal_5.png" /></li>
+</ul>
+</li>
+<li>(4) กด Save เพื่อบันทึกการสร้างรหัสบัญชี</li>
+</ul>
+</div>
+<hr />
+<h2 id="_4">การสร้างหมวดหมู่สินทรัพย์</h2>
+<p><strong>Menu ::</strong> Invoicing &gt; Configuration &gt; Asset Profiles</p>
+<ol>
+<li>
+<p>กดปุ่ม Create เพื่อสร้างหมวดหมู่สินทรัพย์ และกรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) Name: ชื่อของหมวดหมู่สินทรัพย์</li>
+<li>(2) Asset Groups: กลุ่มของสินทรัพย์ที่ต้องการผูกในหมวดหมู่สินทรัพย์</li>
+<li>(3) Create an asset by product item: ใช้สำหรับการซื้อสินทรัพย์จำนวนหลายชิ้น ระบบจะแตกบรรทัดตามจำนวน เพื่อนำไปสร้างสินทรัพย์ในทะเบียนสินทรัพย์</li>
+<li>(4) Auto Asset Number by Sequence: ติ๊กสำหรับการออกเลขที่สินทรัพย์ตามหมวดหมู่</li>
+<li>(5) Journal: สมุดบัญชีสำหรับการบันทึกบัญชีเกี่ยวกับสินทรัพย์</li>
+<li>(6) Asset Account: เลขที่บัญชีสำหรับการบันทึกสินทรัพย์</li>
+<li>(7) Depreciation Account: เลขที่บัญชีสำหรับการบันทึกค่าเสื่อมราคาสะสมสินทรัพย์</li>
+<li>(8) 10. Depr. Expense Account: เลขที่บัญชีสำหรับการบันทึกค่าเสื่อมราคาสินทรัพย์</li>
+<li>(9) Plus-Value Account: เลขที่บัญชีสำหรับการบันทึกตัดจำหน่ายสินทรัพย์ </li>
+<li>(10) Min-Value Account: เลขที่บัญชีสำหรับการบันทึกตัดจำหน่ายสินทรัพย์</li>
+<li>(11) Residual Value Account: เลขที่บัญชีสำหรับการบันทึกตัดจำหน่ายสินทรัพย์</li>
+<li>(12) Allow Reversal of journal entries: ใช้สำหรับกลับรายการค่าเสื่อมราคา</li>
+<li>(13) Time Method: วิธีการคิดช่วงเวลาของค่าเสื่อม<ul>
+<li>(1) เลือก Number of Years or end date: เป็นการคิดค่าเสื่อมตามจำนวนปีที่เลือก หรือคิดค่าเสื่อมจนถึงวันที่กำหนด (End date) หรือ </li>
+<li>(2) เลือก Number of Depreciations: เป็นการคิดค่าเสื่อมตามจำนวนครั้งของการบันทึกค่าเสื่อม</li>
+</ul>
+</li>
+<li>(14) Number of years:<ul>
+<li>(1) หมายถึงจำนวนปีในการคิดค่าเสื่อม ถ้าเลือก Time method แบบ Number of years or end date</li>
+<li>(2) หมายถึงจำนวนครั้งของการบันทึกค่าเสื่อม ถ้าเลือก Time method แบบ Number of depreciations</li>
+</ul>
+</li>
+<li>(15) Period Length: ช่วงเวลาในการคิดค่าเสื่อม ให้เลือกเป็น Month เนื่องจากต้องปิดงบการเงินทุกเดือน</li>
+<li>(16) Calculate by days: ติ๊กเมื่อต้องการคำนวณค่าเสื่อมตามจำนวนวันในเดือน</li>
+<li>(17) Computation Method: วิธีการคิดค่าเสื่อมราคา เลือกเป็น Linear up to Salvage เพื่อคิดค่าเสื่อมแบบเส้นตรง โดยราคามูลค่าคงเหลือสุดท้ายจะเท่ากับราคาซาก</li>
+<li>(18) Prorata Temporis: <ul>
+<li>(1) ติ๊ก หากตั้งการให้เริ่มคิดค่าเสื่อมตั้งแต่วันที่ Asset start date</li>
+<li>(2) ไม่ติ๊ก หากต้องการให้เริ่มคิดค่าเสื่อมตั้งแต่วันแรกของปี (โดยปกติเราจะไม่เลือกวิธีนี้ เพราะเป็นการคิดค่าเสื่อมย้อนหลัง)</li>
+</ul>
+</li>
+<li>(19) Skip Draft State: ติ๊กเมื่อต้องการข้ามสินทรัพย์สถานะ Draft
+<img alt="" src="../img/asset_profile_1.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากตั้งค่าเรียบร้อยแล้วให้กด Save</p>
+</li>
+</ol>
+<hr />
+<h2 id="_5">การสร้างกลุ่มสินทรัพย์</h2>
+<p>การสร้างกลุ่มสินทรัพย์ มีวัตถุประสงค์เพื่อนำไปใช้สำหรับการออกรายงานในทะเบียนสินทรัพย์ 
+และจะต้องนำไปผูกไว้กับหมวดหมู่สินทรัพย์ (Asset Profile) โดยมีขั้นตอนการสร้างดังนี้</p>
+<p><strong>Menu ::</strong> Invoicing &gt; Configuration &gt; Asset Group</p>
+<ol>
+<li>
+<p>กดปุ่ม Create เพื่อสร้างกลุ่มสินทรัพย์  และกรอกข้อมูลดังนี้</p>
+<ul>
+<li>(1) Name: ชื่อของกลุ่มสินทรัพย์ </li>
+<li>(2) Parent Asset Group: ให้เลือกเป็น "All Profile"
+<img alt="" src="../img/asset_group_1.png" /></li>
+</ul>
+</li>
+<li>
+<p>หากตั้งค่าเรียบร้อยแล้วให้กด Save</p>
+</li>
+</ol>
+<hr />
+<h2 id="_6">การสร้างข้อมูลหลักหมวดหมู่สินค้า</h2>
+<p>ผู้รับผิดชอบ สามารถจัดการข้อมูลหลักหมวดหมู่สินค้า (Product Categories) ได้ 2 ช่องทาง ตามสิทธิ์ของแต่ละผู้ใช้งาน</p>
+<p><strong>Menu:</strong> Purchase &gt; Configuration &gt; Product Categories</p>
+<p><strong>Menu:</strong> Invoicing &gt; Configuration &gt; Product Categories</p>
+<p>โดยมีขั้นตอนดังนี้</p>
+<ol>
+<li>
+<p>กดปุ่ม Create 
+<img alt="" src="../img/pro_cate_1.png" /></p>
+</li>
+<li>
+<p>กรอกข้อมูล ดังนี้
+<img alt="" src="../img/pro_cate_2.png" /></p>
+<ul>
+<li>Category Name:</li>
+<li>Parent Category: เลือก Parent (ถ้ามี)</li>
+<li>Logistics<ul>
+<li>Force Removal Strategy: เลือกการจัดการสต็อค<ul>
+<li>First In First Out (FIFO)</li>
+<li>Last In First Out (LIFO)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Inventory Valuation: การตีราคาสินค้าคงเหลือ<ul>
+<li>Costing Method: เลือกการคำนวณต้นทุน<ul>
+<li>Standard Price</li>
+<li>First In First Out (FIFO)</li>
+<li>Average Cost (AVCO)</li>
+</ul>
+</li>
+<li>Inventory Valuation: การตีราคาสินค้าคงเหลือ<ul>
+<li>Manual</li>
+<li>Automated</li>
+</ul>
+</li>
+<li>Account Properties: การบันทึกบัญชี<ul>
+<li>Income Account: เลือกบัญชีบันทึกรายได้</li>
+<li>Expense Account: เลือกบัญชีบันทึกค่าใช้จ่าย</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>กดปุ่ม Save เพื่อบันทึกข้อมูล สามารถกดปุ่ม Edit ได้หากต้องการแก้ไขข้อมูล</li>
+</ol>
+<hr />
+<h2 id="_7">การสร้างข้อมูลหลักสินค้า</h2>
+<p>ผู้รับผิดชอบ สามารถจัดการข้อมูลหลักสินค้า (Products) ได้ 2 ช่องทาง ตามสิทธิ์ของแต่ละผู้ใช้งาน</p>
+<p><strong>Menu:</strong> Sale &gt; Products &gt; Products</p>
+<p><strong>Menu:</strong> Purchase &gt; Products &gt; Products</p>
+<p>โดยมีขั้นตอนดังนี้</p>
+<ol>
+<li>
+<p>กดปุ่ม Create 
+<img alt="" src="../img/product_1.png" /></p>
+</li>
+<li>
+<p>กรอกข้อมูลส่วน Header
+<img alt="" src="../img/product_2.png" /></p>
+<ul>
+<li>(1) Product Name: กรอกชื่อสินค้า</li>
+<li>(2) ทำเครื่องหมาย หาก Product นี้<ul>
+<li>Can be Sold: สามารถขายได้</li>
+<li>Can be Purchased: สามารถจัดซื้อได้</li>
+</ul>
+</li>
+<li>(3) ใส่รูป product (ถ้ามี)</li>
+</ul>
+</li>
+<li>
+<p>ที่แท็บ General Information
+<img alt="" src="../img/product_3.png" /></p>
+<ul>
+<li>Product Type: เลือกประเภทของ product<ul>
+<li>Consumable: วัสดุสิ้นเปลือง</li>
+<li>Storable: product ที่มีการรับเข้าสต็อค</li>
+<li>Service: product ประเภทการให้บริการ</li>
+</ul>
+</li>
+<li>Product Category: เลือกหมวดหมู่ของ product เพื่อเชื่อมโยงกับการบันทึกบัญชี</li>
+<li>Internal Reference: รหัสภายใน (ถ้ามี)</li>
+<li>Barcode: บาร์โค้ดสินค้า (ถ้ามี)</li>
+<li>Sales Price: ตั้งราคาขาย (กรณี product นี้เปิดการขาย ระบบจะดึงราคานี้ไปแสดงเป็นค่าเริ่มต้นในใบเสนอราคา)</li>
+<li>Customer Taxes: ภาษีมูลค่าเพิ่ม (ถ้ามี)</li>
+<li>Witholding Tax: ภาษี หัก ณ ที่จ่าย (ถ้ามี)</li>
+<li>Cost: ราคาต้นทุน (กรณีเลือกบันทึกต้นทุน เป็น Standard price ระบบจะนำราคานี้ไปบันทึกต้นทุน)</li>
+<li>Unit of Measure: หน่วยนับ</li>
+<li>Purchase Unit of Measure: หน่วยนับสำหรับการรับเข้าสต็อค </li>
+</ul>
+</li>
+<li>
+<p>ที่แท็บ Sales (จะแสดงแท็บนี้ เมื่อมีการเลือก Can be Sold)
+<img alt="" src="../img/product_4.png" /></p>
+<ul>
+<li>Invocing Policy: เงื่อนไขการออกบิล<ul>
+<li>Ordered quantities: ออกบิลตามจำนวนที่ออเดอร์</li>
+<li>Delivered quantities: ออกบิลตามจำนวนที่ส่งของ</li>
+</ul>
+</li>
+<li>Sales Description: กรอกคำอธิบายหรือรายละเอียดอื่นๆ (ถ้ามี) ซึ่งจะแสดงในเอกสาร Sale Orders และ Invoices</li>
+</ul>
+</li>
+<li>
+<p>ที่แท็บ Purchase (จะแสดงแท็บนี้ เมื่อมีการเลือก Can be Purchased)
+<img alt="" src="../img/product_5.png" /></p>
+<ul>
+<li>Vendor Taxes: ภาษีมูลค่าเพิ่ม (ถ้ามี)</li>
+<li>Vendor Witholding Tax: ภาษี หัก ณ ที่จ่าย (ถ้ามี)</li>
+<li>Control Policy:<ul>
+<li>On ordered quantities: รับวางบิลตามจำนวนที่ออเดอร์</li>
+<li>On received quantities: รับวางบิลตามจำนวนที่ได้รับของ</li>
+</ul>
+</li>
+<li>Purchase Description: กรอกคำอธิบายหรือรายละเอียดอื่นๆ (ถ้ามี) ซึ่งจะแสดงในเอกสาร Purchase Orders</li>
+</ul>
+</li>
+<li>
+<p>กดปุ่ม Save เพื่อบันทึกข้อมูล สามารถกดปุ่ม Edit ได้หากต้องการแก้ไขข้อมูล</p>
+</li>
+</ol>
+<p>End.</p>
+<hr />
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>

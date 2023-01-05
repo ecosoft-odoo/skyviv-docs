@@ -1,0 +1,1096 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Purchase/Purchase04_deposit/">
+      
+      
+        <link rel="next" href="../in_IN/">
+      
+      <link rel="icon" href="../../logo.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.2">
+    
+    
+      
+        <title>การส่งสินค้าออกจากคลัง (Stock OUT) - SKYVIV</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.f56500e0.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#stock-out" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SKYVIV" class="md-header__button md-logo" aria-label="SKYVIV" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SKYVIV
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              การส่งสินค้าออกจากคลัง (Stock OUT)
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Overview
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../introduction/it_01/" class="md-tabs__link">
+        Introduction
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Sales/Sales01_Quotation/" class="md-tabs__link">
+        Sales
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Purchase/Purchase01_RFQ/" class="md-tabs__link">
+        Purchase
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Inventory
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Accounting/ac01_masterdata/" class="md-tabs__link">
+        Accounting
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SKYVIV" class="md-nav__button md-logo" aria-label="SKYVIV" data-md-component="logo">
+      
+  <img src="../../logo.png" alt="logo">
+
+    </a>
+    SKYVIV
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Introduction
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/it_01/" class="md-nav__link">
+        การใช้งานระบบ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/it_02/" class="md-nav__link">
+        ฟังก์ชันพื้นฐานในระบบ
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Sales
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Sales" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Sales
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales01_Quotation/" class="md-nav__link">
+        การสร้างใบเสนอราคา (Quotation)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales02_SO/" class="md-nav__link">
+        การยืนยันคำสั่งขาย (Sales Order)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales03_OUT/" class="md-nav__link">
+        การส่งสินค้าออกจากคลัง (Stock OUT)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Sales/Sales04_BoM/" class="md-nav__link">
+        การสร้างชุดของสินค้า (BOM)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Purchase
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Purchase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Purchase
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase01_RFQ/" class="md-nav__link">
+        การสร้างคำขอใบเสนอราคา (RFQ)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase02_PO/" class="md-nav__link">
+        การยืนยันคำสั่งซื้อ (Purchase Order)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase03_IN/" class="md-nav__link">
+        การรับสินค้าเข้าคลัง (Stock IN)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Purchase/Purchase04_deposit/" class="md-nav__link">
+        การจ่ายค่าสินค้าล่วงหน้า (Register Deposit)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Inventory
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Inventory" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Inventory
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          การส่งสินค้าออกจากคลัง (Stock OUT)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        การส่งสินค้าออกจากคลัง (Stock OUT)
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    วิธีการส่งสินค้าออกจากคลัง
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backorder" class="md-nav__link">
+    การสร้าง Backorder
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_IN/" class="md-nav__link">
+        การรับสินค้าเข้าคลัง (Stock IN)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_invreport/" class="md-nav__link">
+        รายงานสินค้าคงเหลือ (Inventory Report)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_invforcasted/" class="md-nav__link">
+        รายงานการคาดการณ์สินค้าคงเหลือ (Forcasted Inventory)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_invvaluation/" class="md-nav__link">
+        รายงานมูลค่าสินค้าคงเหลือ (Inventory Valuation)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../in_productmoves/" class="md-nav__link">
+        รายงานการเคลื่อนไหวของสินค้าคงเหลือ (Product Moves)
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Accounting
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Accounting" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Accounting
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac01_masterdata/" class="md-nav__link">
+        การสร้างข้อมูลหลัก
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac02_invoices/" class="md-nav__link">
+        การบันทึกรายได้และตั้งหนี้ลูกหนี้
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac10_customerpayment/" class="md-nav__link">
+        การบันทึกรับเงิน
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac03_vendorbill/" class="md-nav__link">
+        การบันทึกค่าใช้จ่ายและตั้งหนี้เจ้าหนี้
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac04_vendorpayment/" class="md-nav__link">
+        การบันทึกจ่ายชำระ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac05_landedcost/" class="md-nav__link">
+        การโอนค่าใช้จ่ายเข้าสินค้าคงเหลือ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac13_cleartax/" class="md-nav__link">
+        การกลับรายการภาษีซื้อที่ยังไม่ถึงกำหนดชำระ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac06_advance/" class="md-nav__link">
+        เงินทดรองจ่าย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac07_pettycash/" class="md-nav__link">
+        เงินสดย่อย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac11_expense/" class="md-nav__link">
+        สำรองจ่าย
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac08_asset/" class="md-nav__link">
+        สินทรัพย์
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac09_journalentries/" class="md-nav__link">
+        การปิดบัญชี
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac12_report/" class="md-nav__link">
+        รายงาน
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Accounting/ac14_Initial/" class="md-nav__link">
+        การบันทึกรับชำระยอดยกมา
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    วิธีการส่งสินค้าออกจากคลัง
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backorder" class="md-nav__link">
+    การสร้าง Backorder
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="stock-out">การส่งสินค้าออกจากคลัง (Stock Out)</h1>
+<h2 id="_1">วิธีการส่งสินค้าออกจากคลัง</h2>
+<p>เมื่อต้องการส่งสินค้าออกจากคลังสินค้าไปให้ลูกค้า สามารถทำได้ตามวิธีด้านล่าง</p>
+<p><strong>Menu ::</strong> Inventory &gt; Overview &gt; Delivery Orders</p>
+<ol>
+<li>
+<p>ในหน้าต่าง Overview หัวข้อ <strong>Delivery Orders</strong> ผู้ใช้งานสามารถดูได้ว่ามีกี่รายการที่ต้องเข้าไปกดส่งสินค้าจากตรง <strong>xx to Process</strong> โดยสามารถกดเข้าไปที่ปุ่มได้เลย </p>
+<p><img alt="" src="../img/OUT11.png" /></p>
+<p>เมื่อกดเข้าไปแล้วระบบจะแสดงรายการทั้งหมดที่รอกดส่งสินค้า </p>
+<p><img alt="" src="../img/OUT12.png" /></p>
+</li>
+<li>
+<p>สามารถเลือกเอกสารที่ต้องการกดส่งสินค้า โดยพิมพ์ <strong>เลขที่เอกสาร (SO number)</strong> จากช่อง <strong>search</strong> ในหน้าต่างด้านล่าง</p>
+<p><img alt="" src="../img/OUT13.png" /></p>
+</li>
+<li>
+<p>เมื่อกดแล้วระบบจะแสดงหน้าต่างของเอกสารส่งของ โดยสามารถกดปุ่ม <strong>Edit</strong> เพื่อใส่ข้อมูลด้านล่าง</p>
+<ul>
+<li>จำนวนของสินค้าที่จะส่งตรงคอลัมน์ Done </li>
+<li>
+<p>เลือก Lot/Serial Number ตาม SO number ที่เปิดคำสั่งขาย</p>
+<p>จากนั้นกด <strong>Save</strong> เพื่อบันทึกข้อมูล </p>
+</li>
+</ul>
+<p><img alt="" src="../img/OUT03.png" /> 
+<img alt="" src="../img/OUT06.png" /> </p>
+<p>ซึ่งในขั้นตอนนี้สถานะของเอกสารจะแสดงเป็น <strong>Ready</strong>  </p>
+<p><img alt="" src="../img/OUT05.png" /></p>
+</li>
+<li>
+<p>เมื่อตรวจสอบข้อมูลเรียบร้อยแล้วกดปุ่ม <strong>Validate</strong> เพื่อยืนยันการส่งสินค้าให้ลูกค้า </p>
+<ul>
+<li>หากกดปุ่ม Validate โดยที่ยังไม่ได้ใส่ข้อมูลจำนวนสินค้าที่จะส่งตรงคอลัมน์ Done ระบบจะแสดงหน้าต่างด้านล่างเพื่อให้ผู้ใช้งานยืนยันว่าจะทำการส่งสินค้าทั้งหมดตามจำนวนในคำสั่งขาย ใช่หรือไม่</li>
+<li>ถ้าใช่กดปุ่ม <strong>Apply</strong> ถ้าไม่ใช่กด Cancel แล้วใส่ข้อมูลจำนวนสินค้าที่ต้องการส่งตรงคอลัมน์ Done</li>
+</ul>
+<p><img alt="" src="../img/OUT04.png" /></p>
+</li>
+<li>
+<p>หลังยืนยันการส่งสินค้าให้ลูกค้าแล้ว สถานะของเอกสารจะเปลี่ยนเป็น <strong>Done</strong></p>
+<p><img alt="" src="../img/OUT07.png" /></p>
+</li>
+</ol>
+<hr />
+<h2 id="backorder">การสร้าง Backorder</h2>
+<p><strong>กรณีส่งสินค้าไม่ครบตามจำนวนที่อยู่ในคำสั่งขาย</strong>  </p>
+<p>ถ้าจำนวนสินค้าที่กด Validate น้อยกว่าสินค้าที่เปิดคำสั่งขายไป ระบบจะแสดงหน้าต่างด้านล่างขึ้นมา</p>
+<ol>
+<li>กด <strong>Create Backorder</strong> ในกรณีที่ต้องการส่งสินค้าที่ขาดไปให้ลูกค้าตามไปทีหลัง </li>
+<li>กด <strong>No Backorder</strong> ในกรณีที่จะส่งสินค้าตามจำนวนเท่านี้ ไม่ต้องการส่งสินค้าที่ขาดตามไปทีหลัง</li>
+</ol>
+<p><img alt="" src="../img/OUT08.png" /></p>
+<p>ถ้ากดปุ่ม <strong>Create Backorder</strong> ในหน้าต่าง Sales orders บริเวณไอคอนรูปรถ (Delivery) จะแสดงตัวเลขเพิ่มขึ้นเป็น 2</p>
+<p><img alt="" src="../img/OUT09.png" /></p>
+<p>เมื่อกดเข้าไปที่ไอคอนรูปรถ จะเห็นเอกสารใบส่งของสำหรับ Backorder เพิ่มขึ้นมา สามารถกดเข้าไปในเอกสารเพื่อดำเนินการส่งของที่ขาดให้กับลูกค้าได้</p>
+<p><img alt="" src="../img/OUT10.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+    
+  </body>
+</html>
